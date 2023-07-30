@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        input {
+            width: 120px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    Digite seu país: <input type="text" name="nacionalidade" id="inacio">
+
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+        var nacio = window.document.getElementById('inacio')
+        var res = window.document.querySelector('div#res')
+        var resposta = (nacio.value)
+        
+        res.innerHTML = `<p> Você nasceu no  <strong>${resposta}</strong> </p>`
+
+        if (resposta == 'Brasil') {
+            res.innerHTML += `<p> Você tem a nacionalidade <strong>Brasileiro!</strong> </p>`
+        }
+    }
+    </script>
+</body>
+</html>
