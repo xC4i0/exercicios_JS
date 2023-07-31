@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <h1>Hora do dia </h1>
+    <main>
+        <div>
+            <p id="hora">Agora são 1 horas</p>
+            <div id="img">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copy">&copy; Caio do Carmo </p>
+        <img src="" alt="">
+    </footer>
+    <script>
+        var agora = new Date()
+        var hj = agora.getHours()
+        var escrita = window.document.getElementById('hora')
+        escrita.innerHTML = (`Agora são ${hj} horas`)
+
+        if (hj >= 18 || hj <= 5) {
+            var imgg = window.document.getElementById('img')
+            var color = window.document.querySelector('body')
+            color.style.backgroundColor = '#4A4B4B'
+            imgg.style.background =  'black url(./img/noite.jpg) bottom center no-repeat'
+            imgg.style.backgroundSize = 'cover'
+        } else if (hj >= 5 && hj <= 12 ){
+            var imgg = window.document.getElementById('img')
+            var color = window.document.querySelector('body')
+            color.style.backgroundColor = '#CFBD90'
+
+        }
+    </script>
+</body>
+</html>

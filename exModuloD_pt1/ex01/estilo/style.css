@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    background-color: #A97964;
+}
+h1 {
+    text-align: center;
+    margin: 20px 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+main {
+    background-color: white;
+    width: 50%;
+    height: 400px;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.164);
+}
+
+div > p {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    
+}
+
+div#img {
+    background: black url(../img/tarde.jpg) bottom center no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 250px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.copy {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
