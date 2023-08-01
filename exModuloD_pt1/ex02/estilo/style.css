@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgba(11, 178, 255, 0.705);
+}
+
+h1 {
+    text-align: center;
+    margin: 30px 40px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+main {
+    background-color: white;
+    width: 40%;
+    height: 200px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+form {
+    text-align: left;
+    padding: 20px;
+}
+
+.sexos {
+    margin-top: 30px;
+}
+
+.enviar {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+div#img {
+    width: 20%;
+    border-radius: 50%;
+}

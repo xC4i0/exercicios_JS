@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <h1>Verificador de Idade</h1>
+    <main>
+        <form>
+            <div class="Ano_Nasc">Ano de Nasceimento: <input type="number" name="idade" id="iidade"></div>
+
+            <div class="sexos">
+                 <label for="isexmas"> Sexo:
+                    <input type="radio" name="sex" id="isexmas" value="Homem"> Masculino
+                </label>
+                <label for="isexfem">
+                    <input type="radio" name="sex" id="isexfem" value="Mulher"> Feminino
+                </label>
+            </div>
+            <div class="enviar"> <input type="button" value="Verificar" onclick="
+            calcular()" onclick=""></div>
+            <p id="resposta">Preencha os dados acima para ver o resultado!</p>
+            <div id="img">
+                
+            </div>
+        </form>
+    </main>
+    <footer> <p>&copy; Caio do Carmo</p></footer>
+    <script>
+        function calcular() {
+            var ano = (window.document.getElementById('iidade'))
+            var n1 = Number(ano.value)
+            var res = window.document.getElementById('resposta')
+            var imagem = window.document.getElementById('img')
+            var agora = new Date()
+            var anoAtual = agora.getFullYear()
+            var idade = anoAtual - n1
+            
+            var sexo1 = window.document.getElementById('isexmas')
+            var sexo2 = window.document.getElementById('isexfem')
+            var masc = (sexo1.value)
+            var fem = (sexo2.value)
+
+           // res.innerHTML = (`Detectamos ${fem} com ${idade} anos`) 
+
+           if(idade >= 10 || idade <= 18 && sexo1 == 'Homem') {
+            res.innerHTML = (`Detectamos ${masc} com ${idade} anos`)
+            imagem.innerHTML = ('<img src="./img/jovem_mas.jpg" alt="">')
+           }
+        }
+    </script>
+</body>
+</html>
