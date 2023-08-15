@@ -1,0 +1,1 @@
+const notaDoAluno = 7
