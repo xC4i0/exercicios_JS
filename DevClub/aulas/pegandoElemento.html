@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - DevClub</title>
+</head>
+<body>
+    <h1>Js</h1>
+    <input onkeypress="digiteiNoInput()" id="main-input" placeholder="Digite Aqui">
+    <p class="p1"> Começando nossa jornada para aprender</p>
+    <p class="p1">A linguagem de programação mais versátil do mundo</p>
+    <p id="res"></p>
+    <button onclick="cliqueiNoBotao()" class="main-button">Clique aqui</button>
+</body>
+<script>
+
+    const input = document.getElementById('main-input')
+    const res = document.getElementById('res')
+
+    function digiteiNoInput() {
+            console.log(input.value)
+        }
+
+    function cliqueiNoBotao() {
+        res.innerHTML = input.value
+    }
+</script>
+</html>
