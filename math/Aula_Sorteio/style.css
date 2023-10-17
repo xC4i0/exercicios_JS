@@ -41,6 +41,7 @@ p {
 }
 
 input {
+    color: white;
     padding: 8px; 
     border-radius: 8px;
     border: none;
