@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>0</h1>
+    <button onclick="stop()">Stop</button>
+    <button onclick="start()">Start</button>
+
+</body>
+<script>
+    /*
+        setTimeout -> Executa uma vez]
+        setInterval -> Executa infinitas vezes
+            clearInterval -> Pausa o setInterval
+    
+        setTimeout(function() {
+         // execute o que estiver aqui 
+        alert("Executei")
+        }, 1000); // 1000 milisegundos => 1 segundo
+    */
+
+    let number = 0
+    let cron
+    let h1 = document.querySelector('h1')
+
+    function start() {
+        cron = setInterval(function () {
+            number++
+            h1.innerHTML = number
+
+        }, 1000)
+    }
+
+    function stop() {
+        clearInterval(cron)
+    }
+
+
+
+</script>
+
+</html>
+
+<!-- 
+    function myFunction() {
+        // execute o que estiver aqui 
+    }
+    setTimeout(myFunction, timeout);
+
+
+    setTimeout(() => {
+        // execute o que estiver aqui 
+    }, timeout);
+
+ -->
