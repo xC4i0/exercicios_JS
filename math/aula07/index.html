@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 07</title>
+</head>
+    <input placeholder="Digite o nome do Contato">
+    <p></p>
+    <button onclick="procurar()"> Procurar Contato</button>
+</body>
+<script>
+    let p = document.querySelector("p")
+    let input = document.querySelector("input")
+
+    const contacts = [
+        { name: 'Rodolfo', number: '(14) 99323-3213'},
+        { name: 'Luiz', number: '(14) 90893-3763'},
+        { name: 'Caio', number: '(14) 94323-3213'},
+        { name: 'rogerio', number: '(14) 99723-4342'},
+    ]
+
+function procurar() {
+    
+    for(let i = 0; i < contacts.length ;i++) {
+        if(input.value.toLowerCase() === contacts[i].name.toLowerCase() ) {
+            p.innerHTML = `Contato Encontrado Nome: ${contacts[i].name } Tel: ${contacts[i].number}`
+
+            break
+        } else {
+            p.innerHTML = "Contato não encontrado, TENTE NOVAMENTE."
+        }
+    }
+}
+</script>
+</html>
