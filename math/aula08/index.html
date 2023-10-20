@@ -2,10 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 08</title>
 </head>
-<body>
-    
+    <input placeholder="Digite o nome do Contato">
+    <p></p>
+    <button onclick="procurar()"> Procurar Contato</button>
 </body>
+<script>
+    let p = document.querySelector("p")
+    let input = document.querySelector("input")
+
+    const contacts = [
+        { name: 'Rodolfo', number: '(14) 99323-3213'},
+        { name: 'Luiz', number: '(14) 90893-3763'},
+        { name: 'Caio', number: '(14) 94323-3213'},
+        { name: 'rogerio', number: '(14) 99723-4342'},
+    ]
+
+function procurar() {
+    
+    for(const contact of contacts) {
+        if(input.value.toLowerCase() === contact.name.toLowerCase() ) {
+            p.innerHTML = `Contato Encontrado Nome: ${contact.name } Tel: ${contact.number}`
+
+            break
+        } else {
+            p.innerHTML = "Contato não encontrado, TENTE NOVAMENTE."
+        }
+    }
+}
+</script>
 </html>
